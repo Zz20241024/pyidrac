@@ -11,11 +11,11 @@ python2，python3
 ## 安装
 pip install pyidrac
 ## 使用
-from pyidrac import get_hosts_info \n
-z=get_hosts_info(['ip1','ip2'],"user","password") \n
+from pyidrac import get_hosts_info  
+z=get_hosts_info(['ip1','ip2'],"user","password")  
 ## 获取结果:
-z.fetchone 单个结果\n
-z.fetchall()所有结果\n
+z.fetchone 单个结果  
+z.fetchall()所有结果  
 
 
 
