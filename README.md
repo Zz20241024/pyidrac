@@ -7,4 +7,15 @@ idrac服务器详细信息获取
 #python版本
 python2，python3
 
+#使用说明
+##安装
+pip install pyidrac
+##使用
+from pyidrac import get_hosts_info
+z=get_hosts_info(['ip1','ip2'],"user","password")
+获取结果:
+z.fetchone 单个
+z.fetchall()所有
+
+
 
