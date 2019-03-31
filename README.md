@@ -17,10 +17,10 @@ z=get_hosts_info(['ip1','ip2'],"user","password")
 ## 获取结果:
 z.fetchone 单个结果  
 z.fetchall()所有结果  
-##效果
-###原始信息
+## 效果
+### 原始信息
 ![avatar](img/b.png)
-###抓取信息
+### 抓取信息
 ![avatar](img/a.png)
 ![avatar](img/c.png)
 
