@@ -28,7 +28,7 @@ def put_queue_thread(qlock,ips,pqueue,U_P):
         try:
             put_queue_data(ip,pqueue,U_P)
         except Exception as e:
-            logger("ip:{};error:{}".format(ip, e))
+            print("ip:{};error:{}".format(ip, e))
             #print("ip:{};error:{}".format(ip,traceback.format_exc()))
 def get_process(*arg):
     return [Process(target=arg[0], args=arg[1:-1]) for i in range(arg[-1])]
@@ -37,7 +37,7 @@ def get_threads(*arg):
     return [Thread(target=arg[0], args=arg[1:-1]) for i in range(arg[-1])]
 
 def _produce_info(ips,pqueue,pevent,U_P,num=PTHREAD_NUM):
-    logger("method:{} begin to work".format(_produce_info.__name__).center(40,"*"))
+    print("method:{} begin to work".format(_produce_info.__name__).center(40,"*"))
     qlock = RLock()
     parse_data_threads=get_threads(put_queue_thread,qlock,ips,pqueue,U_P,num)
     for i in parse_data_threads:
@@ -45,7 +45,7 @@ def _produce_info(ips,pqueue,pevent,U_P,num=PTHREAD_NUM):
     for i in parse_data_threads:
         i.join()
     pevent.set()
-    logger("method:{} work is over".format(_produce_info.__name__).center(40,"*"))
+    print("method:{} work is over".format(_produce_info.__name__).center(40,"*"))
     sys.exit(0)
 
 

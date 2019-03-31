@@ -24,7 +24,7 @@ def try_request(url,ip,method,**kwargs):
     try:
         resp=r_get_post(url,method=method,**kwargs)
     except Exception as e:
-        logger("host:{};url:{};method:{},error:{}".format(ip,url,method,e))
+        print("host:{};url:{};method:{},error:{}".format(ip,url,method,e))
     return resp
 
 def multi_try_request(url,ip,method,**kwargs):

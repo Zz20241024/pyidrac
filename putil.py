@@ -1,6 +1,6 @@
 #coding=utf-8
 #设计转换函数
-from workf.settings import BASE_DIR
+BASE_DIR=''
 import re,os
 base=2**10#基数1024
 units={0:'b',1:'kb',2:'mb',3:'gb',4:'tb'}#常用字节大小单位字典

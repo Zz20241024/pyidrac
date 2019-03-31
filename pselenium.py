@@ -34,7 +34,7 @@ def token(url,userpassword):
     try:
         header=rec_token(url,userpassword)
     except Exception as e:
-        logger("seleniumurl:%s;error:s%" % (url,e))
+        print("seleniumurl:%s;error:s%" % (url,e))
         header = {}
     return header
 
