@@ -91,7 +91,7 @@ def rec_info(info_types,headers,urlsettings):
 
 def rec_data(ip,*userpass):
     urlsettings=URLSettings(ip)
-    headers=rec_header(urlsettings["plogin"],ip,userpass)
+    headers=rec_header(urlsettings["plogin"],ip,*userpass)
     if headers:
         data = rec_info(PTYPES, headers, urlsettings)
         #print(headers,ip)
