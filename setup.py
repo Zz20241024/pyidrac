@@ -20,5 +20,15 @@ setup(
     packages = find_packages(),
     include_package_data = True,
     platforms = "any",
-    install_requires = []
+    install_requires = [],
+ classifiers=[
+        'Development Status :: 4 - Beta',
+        'Operating System :: OS Independent',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: BSD License',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3.6',
+        'Topic :: Software Development :: Libraries'
+    ],
 )
+
